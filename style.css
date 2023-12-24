@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html,body{
+    height: 100vh;
+    width: 100%;
+}
+/* main container */
+.container{
+    position: relative;
+    height: 100%;width: 100%;
+    /* background-color: lightseagreen; */
+}
+/* header */
+header{
+    height: 60px;
+    width: 100%;
+    /* background-color: lightsalmon; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    color: white;
+}
+header .left{
+    display: flex;
+    justify-content: space-evenly;
+    /* width: 30%; */
+    margin-left: 45px;
+}
+.left h3{
+    margin-right: 21px;
+}
+header .left ul{
+    list-style-type: none;
+    display: flex;
+}
+header .left ul li{
+    margin-left: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+header .right{
+    display: flex;
+    justify-content: space-between;
+    width: 26%;
+}
+header .right img{
+    height: 40px;
+    width: 40px;
+}
+header .right .imglogo{
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 35px;
+}
+header .right .searchbar{
+    height: 35px;
+    width: 400px;
+    display: flex;
+    margin: auto 0;
+}
+header .right .searchbar input{
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+header .right .searchbar input::placeholder {
+    color: white;
+}
+/* section1 */
+.section1{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    /* background-color: lightseagreen; */
+}
+.texts{
+    position: absolute;
+    left: 8%;
+    top: 20%;
+    color: white;
+}
+.texts h1{
+    font-size: 5rem;
+}
+.texts .innerp1{
+    width: 50%;
+}
+.texts .innerp2{
+    display: flex;
+    font-size: 1.1rem;
+    align-items: center;
+    width: 25%;
+    position: relative;
+}
+.innerp2 p,img{
+    margin-right: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.innerp2 .star{
+    font-size: 1.3rem;
+}
+/* cards section */
+.sectioncards {
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    /* background-color: lightgreen; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    background-color: black;
+    box-shadow: 0px -100px 100px rgb(0, 0, 0);
+}
+.card {
+    height: 400px;
+    width: 290px;
+    /* background-color: red; */
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden; 
+    position: relative;
+    cursor: pointer;
+}
+
+.card p{
+    padding-bottom: 20px;
+}
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    scale: 1.1;
+    filter: blur(px);
+    transition: 1s;
+}
+.card p{
+    color: white;
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+    transition: 1s;
+}
+.card h2{
+    color: white;
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+    transition: 1s;
+    text-align: center;
+}
+.card:hover img{
+    filter: blur(4px);
+}
+.card:hover h2{
+    opacity: 1;
+}
+.card:hover p{
+    opacity: 1;
+}
+
+.card{
+    background: rgba(255, 255, 255, .2);
+}
